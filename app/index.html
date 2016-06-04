@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Sign On</title>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/foundation/js/foundation.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="../bower_components/foundation/css/foundation.css">
+	<link rel="stylesheet" href="css/styles.css">
+	
+</head>
+<body ng-app="signonApp">
+<div ng-controller="InputCtrl as ic">
+<div class="row">
+	<div class="column large-12">
+{{ic.test}}
+<h1>Acme Inc.</h1>
+
+<form action="">
+	<fieldset>
+		<legend>
+			opt-in
+		</legend>
+		<input type="text" placeholder="first name" id="firstname" name="firstname" ng-model="ic.firstName">
+		<input type="text" placeholder="last name" id="lastname" name="lastname" ng-model="ic.lastName">
+		<input type="email" placeholder="email" id="email" name="email" ng-model="ic.email">
+		<opt-in>
+		<input type="submit" value="give us your info">
+	    </opt-in>
+	</fieldset>
+	<fieldset>
+		<legend>Some footer stuff</legend>
+		<p>footer stuff</p>
+	</fieldset>
+</form>
+
+</div>
+</div>
+</div>	
+</body>
+</html>
